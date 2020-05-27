@@ -10,6 +10,8 @@ app.use(serve(path.resolve(__dirname, '..', 'client')))
 const userRoutes = require('./routes/users')
 app.use(userRoutes.routes())
 
+require('./store').init()
+
 const taskRoutes = require('./routes/tasks')
 app.use(taskRoutes.routes())
 
